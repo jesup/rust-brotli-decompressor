@@ -10,7 +10,21 @@ homepage = "https://github.com/dropbox/rust-brotli-decompressor"
 repository = "https://github.com/dropbox/rust-brotli-decompressor"
 keywords = ["brotli", "decompression", "lz77", "huffman", "nostd"]
 readme = "README.md"
-exclude = ["testdata/*"]
+# Tests, test data and tooling are not part of the published package.
+exclude = [
+  "testdata/*",
+  "tests/*",
+  "scripts/*",
+  "examples/*",
+  "src/test.rs",
+  "src/test_metadata.rs",
+  "src/huffman/tests.rs",
+  "src/bin/error_handling_tests.rs",
+  "src/bin/ffi_stream_tests.rs",
+  "src/bin/integration_tests.rs",
+  "src/bin/tests.rs",
+  "src/bin/ipsum*",
+]
 autobins = false
 
 [[bin]]

@@ -1,5 +1,6 @@
 #![allow(non_snake_case)]
 #![allow(non_upper_case_globals)]
+#[cfg(test)]
 mod tests;
 use ::core;
 use alloc;

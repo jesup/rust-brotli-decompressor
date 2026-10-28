@@ -41,7 +41,9 @@ mod prefix;
 mod context;
 mod shared_dictionary;
 pub mod transform;
+#[cfg(test)]
 mod test;
+#[cfg(all(test, feature="std"))]
 mod test_metadata;
 mod decode;
 pub mod io_wrappers;

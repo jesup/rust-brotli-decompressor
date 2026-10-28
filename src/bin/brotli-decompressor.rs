@@ -4,9 +4,13 @@
 // features, plus the ffi-api test module.
 #![cfg_attr(not(any(feature="unsafe", feature="seccomp", all(test, feature="ffi-api"))), forbid(unsafe_code))]
 
+#[cfg(test)]
 mod integration_tests;
+#[cfg(test)]
 mod error_handling_tests;
+#[cfg(test)]
 mod ffi_stream_tests;
+#[cfg(test)]
 mod tests;
 extern crate brotli_decompressor;
 extern crate core;
